@@ -7,16 +7,16 @@ package br.jogo.listeners;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import telas.StartFrame;
+import telas.PrincipalFrame;
 
 /**
  *
  * @author Marcos
  */
 public class StarFrameListener implements ActionListener {
-    StartFrame frame;
+    PrincipalFrame frame;
     
-        public StarFrameListener(StartFrame frame) {
+        public StarFrameListener(PrincipalFrame frame) {
         this.frame = frame;
     }
 
