@@ -52,7 +52,7 @@ public class NeveFrame extends javax.swing.JInternalFrame {
         jLabel8 = new javax.swing.JLabel();
         btIr = new javax.swing.JButton();
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lemon\\Pictures\\Neve.jpg")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/jogo/imagens/Neve.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
 
         jLabel2.setFont(new java.awt.Font("MV Boli", 1, 18)); // NOI18N
