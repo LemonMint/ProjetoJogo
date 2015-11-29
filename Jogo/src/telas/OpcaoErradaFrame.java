@@ -14,8 +14,6 @@ import javax.swing.plaf.basic.BasicInternalFrameUI;
  */
 public class OpcaoErradaFrame extends javax.swing.JInternalFrame {
 
-    
-
     /**
      * Creates new form OpcaoErradaFrame
      */
@@ -23,13 +21,18 @@ public class OpcaoErradaFrame extends javax.swing.JInternalFrame {
         initComponents();
         setBorder(null);
         ((BasicInternalFrameUI) this.getUI()).setNorthPane(null);
-        
+
         OpcaoErradaListener listener = new OpcaoErradaListener(this, principal);
-        
+
         btPassar.addActionListener(listener);
         btRetornar.addActionListener(listener);
         btPassar.setActionCommand("passar");
         btRetornar.setActionCommand("retornar");
+    }
+
+    public void Sair() {
+        PrincipalFrame.telaOpcaoErrada = null;
+        this.dispose();
     }
 
     /**

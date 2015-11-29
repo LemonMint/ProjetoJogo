@@ -28,9 +28,12 @@ public class PortaoListener implements ActionListener {
     public void actionPerformed(ActionEvent ae) {
         switch (ae.getActionCommand()) {
             case "retornar":
-                principal.CriarArvoreFrame();
+                frame.Sair();
+                principal.CriarFlorestaFrame();
                 break;
             case "passar":
+                frame.Sair();
+                principal.CriarCadeadoFrame();
                 break;
 
         }

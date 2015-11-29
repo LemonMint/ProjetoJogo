@@ -26,11 +26,13 @@ public class OpcaoErradaListener implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent ae) {
-        if("retornar".equals(ae.getActionCommand())){
-            
+        if ("retornar".equals(ae.getActionCommand())) {
+            frame.Sair();
+            principal.CriarFlorestaFrame();
         }
-        if("passar".equals(ae.getActionCommand())){
-            
+        if ("passar".equals(ae.getActionCommand())) {
+            frame.Sair();
+            principal.CriarCadeadoFrame();
         }
     }
 

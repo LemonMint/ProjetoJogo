@@ -14,18 +14,16 @@ import javax.swing.plaf.basic.BasicInternalFrameUI;
  */
 public class CadeadoFrame extends javax.swing.JInternalFrame {
 
-   
-
     /**
      * Creates new form CadeadoFramne
      */
     public CadeadoFrame(PrincipalFrame principal) {
         initComponents();
         setBorder(null);
-        ((BasicInternalFrameUI) this.getUI()).setNorthPane(null); 
-        
+        ((BasicInternalFrameUI) this.getUI()).setNorthPane(null);
+
         CadeadoListener listener = new CadeadoListener(this, principal);
-        
+
         btCerta.addActionListener(listener);
         btCerta.setActionCommand("certa");
         btErrada1.addActionListener(listener);
@@ -34,6 +32,11 @@ public class CadeadoFrame extends javax.swing.JInternalFrame {
         btErrada1.setActionCommand("errada1");
         btErrada2.setActionCommand("errada2");
         btErrada3.setActionCommand("errada3");
+    }
+
+    public void Sair() {
+        PrincipalFrame.telaCadeado = null;
+        this.dispose();
     }
 
     /**

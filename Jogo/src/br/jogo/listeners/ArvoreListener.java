@@ -28,9 +28,11 @@ public class ArvoreListener implements ActionListener {
     public void actionPerformed(ActionEvent ae) {
         switch (ae.getActionCommand()) {
             case "correr":
+                frame.Sair();
                 principal.CriarPortaoFrame();
                 break;
             case "conversar":
+                frame.Sair();
                 principal.CriarArvore2Frame();
                 break;
 

@@ -27,6 +27,8 @@ public class NeveListener implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent ae) {
         if ("ir".equals(ae.getActionCommand())) {
+            principal.CriarPortaoFrame();
+            frame.Sair();
 
         }
 

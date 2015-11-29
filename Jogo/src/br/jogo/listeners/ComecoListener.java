@@ -28,9 +28,11 @@ public class ComecoListener implements ActionListener {
     public void actionPerformed(ActionEvent ae) {
         switch (ae.getActionCommand()) {
             case "seguir":
+                frame.Sair();
                 principal.CriarFlorestaFrame();
                 break;
             case "muro":
+                frame.Sair();
                 principal.CriarMuroFrame();
                 break;
         }

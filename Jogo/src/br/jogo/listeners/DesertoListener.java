@@ -28,7 +28,8 @@ public class DesertoListener implements ActionListener {
     public void actionPerformed(ActionEvent ae) {
         switch (ae.getActionCommand()) {
             case "carregar":
-
+                principal.CriarNeveFrame();
+                frame.Sair();
                 break;
 
         }

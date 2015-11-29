@@ -14,8 +14,6 @@ import javax.swing.plaf.basic.BasicInternalFrameUI;
  */
 public class Arvore2Frame extends javax.swing.JInternalFrame {
 
-    
-
     /**
      * Creates new form Arvore2Frame
      */
@@ -28,6 +26,11 @@ public class Arvore2Frame extends javax.swing.JInternalFrame {
         btIr.setActionCommand("ir");
         btSeguir.addActionListener(listener);
         btSeguir.setActionCommand("seguir");
+    }
+
+    public void Sair() {
+        PrincipalFrame.telaArvore2 = null;
+        this.dispose();
     }
 
     /**

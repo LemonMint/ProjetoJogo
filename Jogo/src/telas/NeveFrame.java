@@ -14,20 +14,23 @@ import javax.swing.plaf.basic.BasicInternalFrameUI;
  */
 public class NeveFrame extends javax.swing.JInternalFrame {
 
-   
-    
     /**
      * Creates new form NeveFrame
      */
     public NeveFrame(PrincipalFrame principal) {
         initComponents();
         setBorder(null);
-        ((BasicInternalFrameUI) this.getUI()).setNorthPane(null); 
-        
+        ((BasicInternalFrameUI) this.getUI()).setNorthPane(null);
+
         NeveListener listener = new NeveListener(this, principal);
-        
+
         btIr.addActionListener(listener);
         btIr.setActionCommand("ir");
+    }
+
+    public void Sair() {
+        PrincipalFrame.telaNeve = null;
+        this.dispose();
     }
 
     /**

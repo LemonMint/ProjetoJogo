@@ -14,8 +14,6 @@ import javax.swing.plaf.basic.BasicInternalFrameUI;
  */
 public class PeixeFrame extends javax.swing.JInternalFrame {
 
-    
-
     /**
      * Creates new form PeixeFrame
      */
@@ -26,6 +24,11 @@ public class PeixeFrame extends javax.swing.JInternalFrame {
         PeixeListener listener = new PeixeListener(this, principal);
         btPegar.addActionListener(listener);
         btPegar.setActionCommand("pegar");
+    }
+
+    public void Sair() {
+        PrincipalFrame.telaPeixe = null;
+        this.dispose();
     }
 
     /**

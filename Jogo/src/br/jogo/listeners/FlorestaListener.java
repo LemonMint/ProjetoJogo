@@ -28,9 +28,11 @@ public class FlorestaListener implements ActionListener {
     public void actionPerformed(ActionEvent ae) {
         switch (ae.getActionCommand()) {
             case "aproximar":
+                frame.Sair();
                 principal.CriarArvoreFrame();
                 break;
             case "seguir":
+                frame.Sair();
                 principal.CriarPortaoFrame();
                 break;
 

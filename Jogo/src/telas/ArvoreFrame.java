@@ -14,8 +14,6 @@ import javax.swing.plaf.basic.BasicInternalFrameUI;
  */
 public class ArvoreFrame extends javax.swing.JInternalFrame {
 
-  
-
     /**
      * Creates new form FlorestaArvoreFrame
      */
@@ -28,6 +26,11 @@ public class ArvoreFrame extends javax.swing.JInternalFrame {
         btConversar.setActionCommand("conversar");
         btCorrer.addActionListener(listener);
         btCorrer.setActionCommand("correr");
+    }
+
+    public void Sair() {
+        PrincipalFrame.telaArvore = null;
+        this.dispose();
     }
 
     /**

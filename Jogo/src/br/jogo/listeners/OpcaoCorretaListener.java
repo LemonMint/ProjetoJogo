@@ -27,6 +27,7 @@ public class OpcaoCorretaListener implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent ae) {
         if ("passar".equals(ae.getActionCommand())) {
+            frame.Sair();
 
         }
     }

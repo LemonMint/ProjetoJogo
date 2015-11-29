@@ -14,8 +14,6 @@ import javax.swing.plaf.basic.BasicInternalFrameUI;
  */
 public class FlorestaFrame extends javax.swing.JInternalFrame {
 
-    
-    
     /**
      * Creates new form florestaFrame
      */
@@ -28,6 +26,11 @@ public class FlorestaFrame extends javax.swing.JInternalFrame {
         btAproximar.setActionCommand("aproximar");
         btSeguir.addActionListener(listener);
         btSeguir.setActionCommand("seguir");
+    }
+
+    public void Sair() {
+        PrincipalFrame.telaFloresta = null;
+        this.dispose();
     }
 
     /**

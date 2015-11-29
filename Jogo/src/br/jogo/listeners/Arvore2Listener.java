@@ -19,7 +19,6 @@ public class Arvore2Listener implements ActionListener {
     Arvore2Frame frame;
     PrincipalFrame principal;
 
-    
     public Arvore2Listener(Arvore2Frame frame, PrincipalFrame principal) {
         this.frame = frame;
         this.principal = principal;
@@ -30,10 +29,12 @@ public class Arvore2Listener implements ActionListener {
         switch (ae.getActionCommand()) {
 
             case "ir":
+                frame.Sair();
                 principal.CriarPortaoFrame();
                 break;
 
             case "seguir":
+                frame.Sair();
                 principal.CriarCaminhoPedras();
                 break;
 

@@ -14,7 +14,7 @@ import telas.PrincipalFrame;
  *
  * @author Lemon
  */
-public class PeixeListener implements ActionListener{
+public class PeixeListener implements ActionListener {
 
     PeixeFrame frame;
     PrincipalFrame principal;
@@ -23,15 +23,14 @@ public class PeixeListener implements ActionListener{
         this.frame = frame;
         this.principal = principal;
     }
-    
-    
-    
+
     @Override
     public void actionPerformed(ActionEvent ae) {
-        if("pegar".equals(ae.getActionCommand())){
+        if ("pegar".equals(ae.getActionCommand())) {
+            frame.Sair();
             principal.CriarOasisFrame();
-            
+
         }
     }
-    
+
 }

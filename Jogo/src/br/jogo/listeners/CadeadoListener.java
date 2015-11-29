@@ -28,12 +28,20 @@ public class CadeadoListener implements ActionListener{
     public void actionPerformed(ActionEvent ae) {
         switch(ae.getActionCommand()){
             case "errada1":
+                frame.Sair();
+                principal.CriarOpcaoErradaFrame();
                 break;
             case "errada2":
+                frame.Sair();
+                principal.CriarOpcaoErradaFrame();
                 break;
             case "errada3":
+                frame.Sair();
+                principal.CriarOpcaoErradaFrame();
                 break;
             case "certa":
+                frame.Sair();
+                principal.CriarOpcaoCorretaFrame();
                 break;
         }
     }

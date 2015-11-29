@@ -14,8 +14,6 @@ import javax.swing.plaf.basic.BasicInternalFrameUI;
  */
 public class PortaoFrame extends javax.swing.JInternalFrame {
 
-    
-    
     /**
      * Creates new form MuroAlto
      */
@@ -28,8 +26,14 @@ public class PortaoFrame extends javax.swing.JInternalFrame {
         btSeguir1.setActionCommand("retornar");
         btPassar.addActionListener(listener);
         btPassar.setActionCommand("passar");
-       
+
     }
+
+    public void Sair() {
+        PrincipalFrame.telaPortao = null;
+        this.dispose();
+    }
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {

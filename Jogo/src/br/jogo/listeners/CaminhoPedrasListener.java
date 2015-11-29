@@ -28,6 +28,7 @@ public class CaminhoPedrasListener implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent ae) {
         if("continuar".equals(ae.getActionCommand())){
+            frame.Sair();
             principal.CriarPeixeFrame();
             
         }

@@ -14,19 +14,23 @@ import javax.swing.plaf.basic.BasicInternalFrameUI;
  */
 public class OpcaoCorretaFrame extends javax.swing.JInternalFrame {
 
-    
     /**
      * Creates new form OpcaoCorretaFrame
      */
     public OpcaoCorretaFrame(PrincipalFrame principal) {
         initComponents();
-         setBorder(null);
+        setBorder(null);
         ((BasicInternalFrameUI) this.getUI()).setNorthPane(null);
-        
+
         OpcaoCorretaListener listener = new OpcaoCorretaListener(this, principal);
-        
+
         btPassar.addActionListener(listener);
         btPassar.setActionCommand("passar");
+    }
+
+    public void Sair() {
+        PrincipalFrame.telaOpcaoCorreta = null;
+        this.dispose();
     }
 
     /**

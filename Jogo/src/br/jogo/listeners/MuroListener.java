@@ -28,6 +28,7 @@ public class MuroListener implements ActionListener {
     public void actionPerformed(ActionEvent ae) {
         switch (ae.getActionCommand()) {
             case "seguir":
+                frame.Sair();
                 principal.CriarFlorestaFrame();
                 break;
 

@@ -14,8 +14,6 @@ import javax.swing.plaf.basic.BasicInternalFrameUI;
  */
 public class MuroFrame extends javax.swing.JInternalFrame {
 
-    
-    
     /**
      * Creates new form MuroFrame
      */
@@ -26,6 +24,11 @@ public class MuroFrame extends javax.swing.JInternalFrame {
         MuroListener listener = new MuroListener(this, principal);
         btSeguir.addActionListener(listener);
         btSeguir.setActionCommand("seguir");
+    }
+
+    public void Sair() {
+        PrincipalFrame.telaMuro = null;
+        this.dispose();
     }
 
     /**

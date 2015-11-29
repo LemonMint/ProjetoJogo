@@ -14,6 +14,7 @@ import javax.swing.plaf.basic.BasicInternalFrameUI;
  */
 public class ComecoFrame extends javax.swing.JInternalFrame {
 
+    PrincipalFrame principal;
     /**
      * Creates new form ComecoFrame
      */
@@ -29,6 +30,10 @@ public class ComecoFrame extends javax.swing.JInternalFrame {
 
     }
 
+    public void Sair(){
+        PrincipalFrame.telaComeco = null;
+        this.dispose(); 
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
