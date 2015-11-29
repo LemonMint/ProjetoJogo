@@ -6,6 +6,8 @@
 package br.jogo.listeners;
 
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import org.omg.CORBA.portable.ApplicationException;
 import telas.FinalFrame;
 import telas.PrincipalFrame;
 
@@ -13,7 +15,7 @@ import telas.PrincipalFrame;
  *
  * @author Marcos
  */
-public class FinalListener {
+public class FinalListener implements ActionListener {
 
     FinalFrame frame;
     PrincipalFrame principal;
@@ -25,9 +27,12 @@ public class FinalListener {
 
     public void actionPerformed(ActionEvent ae) {
         switch (ae.getActionCommand()) {
-            case "carregar":
-                principal.CriarNeveFrame();
+            case "reiniciar":
+                principal.CriarIniciarJogoFrame();
                 frame.Sair();
+                break;
+            case "sair":
+                System.exit(0);
                 break;
 
         }

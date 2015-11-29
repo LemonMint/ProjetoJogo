@@ -86,9 +86,9 @@ public class OpcaoCorretaFrame extends javax.swing.JInternalFrame {
                 .addComponent(jLabel3)
                 .addGap(14, 14, 14)
                 .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 173, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 113, Short.MAX_VALUE)
                 .addComponent(btPassar)
-                .addGap(23, 23, 23))
+                .addGap(87, 87, 87))
         );
 
         pack();

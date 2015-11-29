@@ -100,9 +100,9 @@ public class PeixeFrame extends javax.swing.JInternalFrame {
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 88, Short.MAX_VALUE)
+                .addGap(43, 43, 43)
                 .addComponent(btPegar)
-                .addGap(29, 29, 29))
+                .addContainerGap(78, Short.MAX_VALUE))
         );
 
         pack();

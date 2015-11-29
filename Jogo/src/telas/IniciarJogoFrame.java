@@ -64,7 +64,7 @@ public class IniciarJogoFrame extends javax.swing.JInternalFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/jogo/imagens/LogindoJogo.png"))); // NOI18N
 
         jLabel2.setFont(new java.awt.Font("MV Boli", 1, 18)); // NOI18N
-        jLabel2.setText("                                 A Lenda do Herói");
+        jLabel2.setText("                                 Jornada na floresta");
         jLabel2.setPreferredSize(new java.awt.Dimension(900, 55));
 
         btIniciar.setFont(new java.awt.Font("MV Boli", 1, 18)); // NOI18N
