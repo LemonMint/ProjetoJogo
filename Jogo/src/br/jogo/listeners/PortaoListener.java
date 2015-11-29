@@ -8,29 +8,32 @@ package br.jogo.listeners;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import telas.PortaoFrame;
+import telas.PrincipalFrame;
 
 /**
  *
  * @author Lemon
  */
-public class PortaoListener implements ActionListener{
-    
-    PortaoFrame frame;
+public class PortaoListener implements ActionListener {
 
-    public PortaoListener(PortaoFrame frame) {
+    PortaoFrame frame;
+    PrincipalFrame principal;
+
+    public PortaoListener(PortaoFrame frame, PrincipalFrame principal) {
         this.frame = frame;
+        this.principal = principal;
     }
-    
+
     @Override
     public void actionPerformed(ActionEvent ae) {
-        switch(ae.getActionCommand()){
+        switch (ae.getActionCommand()) {
             case "retornar":
-                
+                principal.CriarArvoreFrame();
                 break;
             case "passar":
                 break;
-            
+
         }
     }
-    
+
 }

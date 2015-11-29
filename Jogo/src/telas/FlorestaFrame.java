@@ -14,15 +14,16 @@ import javax.swing.plaf.basic.BasicInternalFrameUI;
  */
 public class FlorestaFrame extends javax.swing.JInternalFrame {
 
-    FlorestaListener listener = new FlorestaListener(this);
+    
     
     /**
      * Creates new form florestaFrame
      */
-    public FlorestaFrame() {
+    public FlorestaFrame(PrincipalFrame principal) {
         initComponents();
         setBorder(null);
         ((BasicInternalFrameUI) this.getUI()).setNorthPane(null);
+        FlorestaListener listener = new FlorestaListener(this, principal);
         btAproximar.addActionListener(listener);
         btAproximar.setActionCommand("aproximar");
         btSeguir.addActionListener(listener);
@@ -77,7 +78,7 @@ public class FlorestaFrame extends javax.swing.JInternalFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(43, Short.MAX_VALUE)
+                .addContainerGap(45, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -110,11 +111,11 @@ public class FlorestaFrame extends javax.swing.JInternalFrame {
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btAproximar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btSeguir, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(21, 21, 21))
+                .addGap(36, 36, 36))
         );
 
         pack();

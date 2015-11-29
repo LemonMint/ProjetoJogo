@@ -14,17 +14,18 @@ import javax.swing.plaf.basic.BasicInternalFrameUI;
  */
 public class PortaoFrame extends javax.swing.JInternalFrame {
 
-    PortaoListener listener = new PortaoListener(this);
+    
     
     /**
      * Creates new form MuroAlto
      */
-    public PortaoFrame() {
+    public PortaoFrame(PrincipalFrame principal) {
         initComponents();
         setBorder(null);
         ((BasicInternalFrameUI) this.getUI()).setNorthPane(null);
-        btPassar.addActionListener(listener);
-        btPassar.setActionCommand("retornar");
+        PortaoListener listener = new PortaoListener(this, principal);
+        btSeguir1.addActionListener(listener);
+        btSeguir1.setActionCommand("retornar");
         btPassar.addActionListener(listener);
         btPassar.setActionCommand("passar");
        

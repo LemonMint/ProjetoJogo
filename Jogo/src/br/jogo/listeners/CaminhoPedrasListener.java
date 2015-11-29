@@ -8,6 +8,7 @@ package br.jogo.listeners;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import telas.CaminhoPedrasFrame;
+import telas.PrincipalFrame;
 
 /**
  *
@@ -16,15 +17,18 @@ import telas.CaminhoPedrasFrame;
 public class CaminhoPedrasListener implements ActionListener{
 
     CaminhoPedrasFrame frame;
+    PrincipalFrame principal;
 
-    public CaminhoPedrasListener(CaminhoPedrasFrame frame) {
+    public CaminhoPedrasListener(CaminhoPedrasFrame frame, PrincipalFrame principal) {
         this.frame = frame;
+        this.principal = principal;
     }
     
     
     @Override
     public void actionPerformed(ActionEvent ae) {
         if("continuar".equals(ae.getActionCommand())){
+            principal.CriarPeixeFrame();
             
         }
     }

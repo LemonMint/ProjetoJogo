@@ -17,9 +17,12 @@ import telas.PrincipalFrame;
 public class IniciarJogoListener implements ActionListener {
 
     IniciarJogoFrame frame;
-    PrincipalFrame Principal;
-    public IniciarJogoListener(IniciarJogoFrame frame) {
+    PrincipalFrame principal;
+    //PrincipalFrame Principal;
+    public IniciarJogoListener(IniciarJogoFrame frame, PrincipalFrame principal) {
         this.frame = frame;
+        this.principal = principal;
+        
     }
 
     @Override
@@ -28,7 +31,7 @@ public class IniciarJogoListener implements ActionListener {
 
             case "iniciar":
                 frame.SairTela();
-                Principal.CriarComecoFrame();
+                principal.CriarComecoFrame();
                 break;
 
             case "creditos":

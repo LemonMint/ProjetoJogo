@@ -8,6 +8,7 @@ package br.jogo.listeners;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import telas.OpcaoErradaFrame;
+import telas.PrincipalFrame;
 
 /**
  *
@@ -16,9 +17,11 @@ import telas.OpcaoErradaFrame;
 public class OpcaoErradaListener implements ActionListener {
 
     OpcaoErradaFrame frame;
+    PrincipalFrame principal;
 
-    public OpcaoErradaListener(OpcaoErradaFrame frame) {
+    public OpcaoErradaListener(OpcaoErradaFrame frame, PrincipalFrame principal) {
         this.frame = frame;
+        this.principal = principal;
     }
 
     @Override

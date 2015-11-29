@@ -8,6 +8,7 @@ package br.jogo.listeners;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import telas.NeveFrame;
+import telas.PrincipalFrame;
 
 /**
  *
@@ -16,15 +17,17 @@ import telas.NeveFrame;
 public class NeveListener implements ActionListener {
 
     NeveFrame frame;
+    PrincipalFrame principal;
 
-    public NeveListener(NeveFrame frame) {
+    public NeveListener(NeveFrame frame, PrincipalFrame principal) {
         this.frame = frame;
+        this.principal = principal;
     }
 
     @Override
     public void actionPerformed(ActionEvent ae) {
         if ("ir".equals(ae.getActionCommand())) {
-            
+
         }
 
     }

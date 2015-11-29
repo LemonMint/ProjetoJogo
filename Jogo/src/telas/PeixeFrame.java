@@ -14,15 +14,16 @@ import javax.swing.plaf.basic.BasicInternalFrameUI;
  */
 public class PeixeFrame extends javax.swing.JInternalFrame {
 
-    PeixeListener listener = new PeixeListener(this);
+    
 
     /**
      * Creates new form PeixeFrame
      */
-    public PeixeFrame() {
+    public PeixeFrame(PrincipalFrame principal) {
         initComponents();
         setBorder(null);
         ((BasicInternalFrameUI) this.getUI()).setNorthPane(null);
+        PeixeListener listener = new PeixeListener(this, principal);
         btPegar.addActionListener(listener);
         btPegar.setActionCommand("pegar");
     }

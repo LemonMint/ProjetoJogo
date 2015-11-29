@@ -8,27 +8,29 @@ package br.jogo.listeners;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import telas.OasisFrame;
+import telas.PrincipalFrame;
 
 /**
  *
  * @author Lemon
  */
-public class OasisListener  implements ActionListener{
+public class OasisListener implements ActionListener {
 
     OasisFrame frame;
+    PrincipalFrame principal;
 
-    public OasisListener(OasisFrame frame) {
+    public OasisListener(OasisFrame frame, PrincipalFrame principal) {
         this.frame = frame;
+        this.principal = principal;
     }
-    
+
     @Override
     public void actionPerformed(ActionEvent ae) {
-        switch(ae.getActionCommand()){
+        switch (ae.getActionCommand()) {
             case "seguir":
-                
+                principal.CriarDesertoFrame();
                 break;
         }
     }
-    
-    
+
 }

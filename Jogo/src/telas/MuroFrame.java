@@ -14,15 +14,16 @@ import javax.swing.plaf.basic.BasicInternalFrameUI;
  */
 public class MuroFrame extends javax.swing.JInternalFrame {
 
-    MuroListener listener = new MuroListener(this);
+    
     
     /**
      * Creates new form MuroFrame
      */
-    public MuroFrame() {
+    public MuroFrame(PrincipalFrame principal) {
         initComponents();
         setBorder(null);
         ((BasicInternalFrameUI) this.getUI()).setNorthPane(null);
+        MuroListener listener = new MuroListener(this, principal);
         btSeguir.addActionListener(listener);
         btSeguir.setActionCommand("seguir");
     }
@@ -74,9 +75,9 @@ public class MuroFrame extends javax.swing.JInternalFrame {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 207, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 188, Short.MAX_VALUE)
                 .addComponent(btSeguir)
-                .addGap(33, 33, 33))
+                .addGap(56, 56, 56))
         );
 
         pack();

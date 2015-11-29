@@ -14,15 +14,14 @@ import javax.swing.plaf.basic.BasicInternalFrameUI;
  */
 public class DesertoFrame extends javax.swing.JInternalFrame {
 
-    DesertoListener listener = new DesertoListener(this);
-    
     /**
      * Creates new form DesertoFrame
      */
-    public DesertoFrame() {
+    public DesertoFrame(PrincipalFrame principal) {
         initComponents();
         setBorder(null);
         ((BasicInternalFrameUI) this.getUI()).setNorthPane(null);
+        DesertoListener listener = new DesertoListener(this, principal);
         btCarregar.addActionListener(listener);
         btCarregar.setActionCommand("carregar");
     }
@@ -101,9 +100,9 @@ public class DesertoFrame extends javax.swing.JInternalFrame {
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(btCarregar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27))
+                .addContainerGap(52, Short.MAX_VALUE))
         );
 
         pack();

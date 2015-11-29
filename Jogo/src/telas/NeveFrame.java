@@ -14,15 +14,18 @@ import javax.swing.plaf.basic.BasicInternalFrameUI;
  */
 public class NeveFrame extends javax.swing.JInternalFrame {
 
-    NeveListener listener = new NeveListener(this);
+   
     
     /**
      * Creates new form NeveFrame
      */
-    public NeveFrame() {
+    public NeveFrame(PrincipalFrame principal) {
         initComponents();
         setBorder(null);
-        ((BasicInternalFrameUI) this.getUI()).setNorthPane(null);
+        ((BasicInternalFrameUI) this.getUI()).setNorthPane(null); 
+        
+        NeveListener listener = new NeveListener(this, principal);
+        
         btIr.addActionListener(listener);
         btIr.setActionCommand("ir");
     }

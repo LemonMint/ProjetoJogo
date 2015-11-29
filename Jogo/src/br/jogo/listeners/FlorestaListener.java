@@ -8,28 +8,33 @@ package br.jogo.listeners;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import telas.FlorestaFrame;
+import telas.PrincipalFrame;
 
 /**
  *
  * @author Lemon
  */
-public class FlorestaListener implements ActionListener{
+public class FlorestaListener implements ActionListener {
 
     FlorestaFrame frame;
+    PrincipalFrame principal;
 
-    public FlorestaListener(FlorestaFrame frame) {
+    public FlorestaListener(FlorestaFrame frame, PrincipalFrame principal) {
         this.frame = frame;
+        this.principal = principal;
     }
-    
+
     @Override
     public void actionPerformed(ActionEvent ae) {
-       switch(ae.getActionCommand()){
-           case "aproximar":
-               break;
-           case "seguir":
-               break;
-           
-       }
+        switch (ae.getActionCommand()) {
+            case "aproximar":
+                principal.CriarArvoreFrame();
+                break;
+            case "seguir":
+                principal.CriarPortaoFrame();
+                break;
+
+        }
     }
-    
+
 }

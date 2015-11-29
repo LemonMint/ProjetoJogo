@@ -8,32 +8,33 @@ package br.jogo.listeners;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import telas.ArvoreFrame;
+import telas.PrincipalFrame;
 
 /**
  *
  * @author Lemon
  */
-public class ArvoreListener implements ActionListener{
+public class ArvoreListener implements ActionListener {
 
     ArvoreFrame frame;
+    PrincipalFrame principal;
 
-    public ArvoreListener(ArvoreFrame frame) {
+    public ArvoreListener(ArvoreFrame frame, PrincipalFrame principal) {
         this.frame = frame;
+        this.principal = principal;
     }
-    
-    
+
     @Override
     public void actionPerformed(ActionEvent ae) {
-        switch(ae.getActionCommand()){
+        switch (ae.getActionCommand()) {
             case "correr":
+                principal.CriarPortaoFrame();
                 break;
             case "conversar":
+                principal.CriarArvore2Frame();
                 break;
-            
+
         }
     }
-    
-    
-    
-    
+
 }

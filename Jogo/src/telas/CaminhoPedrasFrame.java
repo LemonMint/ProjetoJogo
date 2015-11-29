@@ -14,15 +14,18 @@ import javax.swing.plaf.basic.BasicInternalFrameUI;
  */
 public class CaminhoPedrasFrame extends javax.swing.JInternalFrame {
 
-    CaminhoPedrasListener listener = new CaminhoPedrasListener(this);
+    
 
     /**
      * Creates new form CaminhoPedrasFrame
      */
-    public CaminhoPedrasFrame() {
+    public CaminhoPedrasFrame(PrincipalFrame principal) {
         initComponents();
         setBorder(null);
         ((BasicInternalFrameUI) this.getUI()).setNorthPane(null);
+        
+        CaminhoPedrasListener listener = new CaminhoPedrasListener(this, principal);
+        
         btContinuar.addActionListener(listener);
         btContinuar.setActionCommand("continuar");
     }

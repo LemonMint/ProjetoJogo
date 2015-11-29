@@ -14,15 +14,18 @@ import javax.swing.plaf.basic.BasicInternalFrameUI;
  */
 public class CadeadoFrame extends javax.swing.JInternalFrame {
 
-    CadeadoListener listener = new CadeadoListener(this);
+   
 
     /**
      * Creates new form CadeadoFramne
      */
-    public CadeadoFrame() {
+    public CadeadoFrame(PrincipalFrame principal) {
         initComponents();
         setBorder(null);
-        ((BasicInternalFrameUI) this.getUI()).setNorthPane(null);
+        ((BasicInternalFrameUI) this.getUI()).setNorthPane(null); 
+        
+        CadeadoListener listener = new CadeadoListener(this, principal);
+        
         btCerta.addActionListener(listener);
         btCerta.setActionCommand("certa");
         btErrada1.addActionListener(listener);

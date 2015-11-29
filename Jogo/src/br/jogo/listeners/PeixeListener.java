@@ -8,6 +8,7 @@ package br.jogo.listeners;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import telas.PeixeFrame;
+import telas.PrincipalFrame;
 
 /**
  *
@@ -16,9 +17,11 @@ import telas.PeixeFrame;
 public class PeixeListener implements ActionListener{
 
     PeixeFrame frame;
+    PrincipalFrame principal;
 
-    public PeixeListener(PeixeFrame frame) {
+    public PeixeListener(PeixeFrame frame, PrincipalFrame principal) {
         this.frame = frame;
+        this.principal = principal;
     }
     
     
@@ -26,6 +29,7 @@ public class PeixeListener implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent ae) {
         if("pegar".equals(ae.getActionCommand())){
+            principal.CriarOasisFrame();
             
         }
     }

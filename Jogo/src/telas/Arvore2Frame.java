@@ -14,15 +14,16 @@ import javax.swing.plaf.basic.BasicInternalFrameUI;
  */
 public class Arvore2Frame extends javax.swing.JInternalFrame {
 
-    Arvore2Listener listener = new Arvore2Listener(this);
+    
 
     /**
      * Creates new form Arvore2Frame
      */
-    public Arvore2Frame() {
+    public Arvore2Frame(PrincipalFrame principal) {
         initComponents();
         setBorder(null);
         ((BasicInternalFrameUI) this.getUI()).setNorthPane(null);
+        Arvore2Listener listener = new Arvore2Listener(this, principal);
         btIr.addActionListener(listener);
         btIr.setActionCommand("ir");
         btSeguir.addActionListener(listener);
@@ -114,11 +115,11 @@ public class Arvore2Frame extends javax.swing.JInternalFrame {
                 .addComponent(jLabel7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btSeguir)
                     .addComponent(btIr))
-                .addGap(22, 22, 22))
+                .addContainerGap(62, Short.MAX_VALUE))
         );
 
         pack();

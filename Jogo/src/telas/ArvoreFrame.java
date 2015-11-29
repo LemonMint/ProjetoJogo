@@ -14,15 +14,16 @@ import javax.swing.plaf.basic.BasicInternalFrameUI;
  */
 public class ArvoreFrame extends javax.swing.JInternalFrame {
 
-    ArvoreListener listener = new ArvoreListener(this);
+  
 
     /**
      * Creates new form FlorestaArvoreFrame
      */
-    public ArvoreFrame() {
+    public ArvoreFrame(PrincipalFrame principal) {
         initComponents();
         setBorder(null);
         ((BasicInternalFrameUI) this.getUI()).setNorthPane(null);
+        ArvoreListener listener = new ArvoreListener(this, principal);
         btConversar.addActionListener(listener);
         btConversar.setActionCommand("conversar");
         btCorrer.addActionListener(listener);
@@ -90,11 +91,11 @@ public class ArvoreFrame extends javax.swing.JInternalFrame {
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 142, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 89, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btConversar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btCorrer, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20))
+                .addGap(77, 77, 77))
         );
 
         pack();

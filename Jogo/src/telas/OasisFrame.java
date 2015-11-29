@@ -14,15 +14,14 @@ import javax.swing.plaf.basic.BasicInternalFrameUI;
  */
 public class OasisFrame extends javax.swing.JInternalFrame {
 
-    OasisListener listener = new OasisListener(this);
-    
     /**
      * Creates new form OasisFrame
      */
-    public OasisFrame() {
+    public OasisFrame(PrincipalFrame principal) {
         initComponents();
         setBorder(null);
         ((BasicInternalFrameUI) this.getUI()).setNorthPane(null);
+        OasisListener listener = new OasisListener(this, principal);
         btSeguir.addActionListener(listener);
         btSeguir.setActionCommand("seguir");
     }

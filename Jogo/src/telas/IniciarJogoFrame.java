@@ -15,14 +15,14 @@ import javax.swing.plaf.basic.BasicInternalFrameUI;
  */
 public class IniciarJogoFrame extends javax.swing.JInternalFrame {
     
-    IniciarJogoListener listener = new IniciarJogoListener(this);
     /**
      * Creates new form IniciarJogoFrame
      */
-    public IniciarJogoFrame() {
+    public IniciarJogoFrame(PrincipalFrame principal) {
         initComponents();
         setBorder(null);
         ((BasicInternalFrameUI) this.getUI()).setNorthPane(null);
+        IniciarJogoListener listener = new IniciarJogoListener(this, principal);
         btIniciar.addActionListener(listener);
         btIniciar.setActionCommand("iniciar");
         btCreditos.addActionListener(listener);

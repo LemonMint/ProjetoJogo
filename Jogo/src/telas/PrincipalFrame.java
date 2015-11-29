@@ -38,7 +38,7 @@ public class PrincipalFrame extends javax.swing.JFrame {
 
     public void CriarComecoFrame() {
         if (telaComeco == null) {
-            telaComeco = new ComecoFrame();
+            telaComeco = new ComecoFrame(this);
         }
         jDesktopPane1.add(telaComeco);
         telaComeco.setVisible(true);
@@ -46,7 +46,7 @@ public class PrincipalFrame extends javax.swing.JFrame {
 
     public void CriarIniciarJogoFrame() {
         if (telaIniciarJogo == null) {
-            telaIniciarJogo = new IniciarJogoFrame();
+            telaIniciarJogo = new IniciarJogoFrame(this);
         }
         jDesktopPane1.add(telaIniciarJogo);
         telaIniciarJogo.setVisible(true);
@@ -54,7 +54,7 @@ public class PrincipalFrame extends javax.swing.JFrame {
 
     public void CriarDesertoFrame() {
         if (telaDeserto == null) {
-            telaDeserto = new DesertoFrame();
+            telaDeserto = new DesertoFrame(this);
         }
         jDesktopPane1.add(telaDeserto);
         telaDeserto.setVisible(true);
@@ -62,7 +62,8 @@ public class PrincipalFrame extends javax.swing.JFrame {
 
     public void CriarFlorestaFrame() {
         if (telaFloresta == null) {
-            telaFloresta = new FlorestaFrame();
+            telaFloresta = new FlorestaFrame(this);
+
         }
         jDesktopPane1.add(telaFloresta);
         telaFloresta.setVisible(true);
@@ -70,7 +71,8 @@ public class PrincipalFrame extends javax.swing.JFrame {
 
     public void CriarPortaoFrame() {
         if (telaPortao == null) {
-            telaPortao = new PortaoFrame();
+            telaPortao = new PortaoFrame(this);
+
         }
         jDesktopPane1.add(telaPortao);
         telaPortao.setVisible(true);
@@ -78,7 +80,7 @@ public class PrincipalFrame extends javax.swing.JFrame {
 
     public void CriarOasisFrame() {
         if (telaOasis == null) {
-            telaOasis = new OasisFrame();
+            telaOasis = new OasisFrame(this);
         }
         jDesktopPane1.add(telaOasis);
         telaOasis.setVisible(true);
@@ -86,7 +88,7 @@ public class PrincipalFrame extends javax.swing.JFrame {
 
     public void CriarMuroFrame() {
         if (telaMuro == null) {
-            telaMuro = new MuroFrame();
+            telaMuro = new MuroFrame(this);
         }
         jDesktopPane1.add(telaMuro);
         telaMuro.setVisible(true);
@@ -94,7 +96,7 @@ public class PrincipalFrame extends javax.swing.JFrame {
 
     public void CriarArvore2Frame() {
         if (telaArvore2 == null) {
-            telaArvore2 = new Arvore2Frame();
+            telaArvore2 = new Arvore2Frame(this);
         }
         jDesktopPane1.add(telaArvore2);
         telaArvore2.setVisible(true);
@@ -102,7 +104,7 @@ public class PrincipalFrame extends javax.swing.JFrame {
 
     public void CriarArvoreFrame() {
         if (telaArvore == null) {
-            telaArvore = new ArvoreFrame();
+            telaArvore = new ArvoreFrame(this);
         }
         jDesktopPane1.add(telaArvore);
         telaArvore.setVisible(true);
@@ -110,7 +112,7 @@ public class PrincipalFrame extends javax.swing.JFrame {
 
     public void CriarCadeadoFrame() {
         if (telaCadeado == null) {
-            telaCadeado = new CadeadoFrame();
+            telaCadeado = new CadeadoFrame(this);
         }
         jDesktopPane1.add(telaCadeado);
         telaCadeado.setVisible(true);
@@ -118,7 +120,7 @@ public class PrincipalFrame extends javax.swing.JFrame {
 
     public void CriarCaminhoPedras() {
         if (telaCaminhoPedras == null) {
-            telaCaminhoPedras = new CaminhoPedrasFrame();
+            telaCaminhoPedras = new CaminhoPedrasFrame(this);
         }
         jDesktopPane1.add(telaCaminhoPedras);
         telaCaminhoPedras.setVisible(true);
@@ -126,7 +128,7 @@ public class PrincipalFrame extends javax.swing.JFrame {
 
     public void CriarNeveFrame() {
         if (telaNeve == null) {
-            telaNeve = new NeveFrame();
+            telaNeve = new NeveFrame(this);
         }
         jDesktopPane1.add(telaNeve);
         telaNeve.setVisible(true);
@@ -134,7 +136,7 @@ public class PrincipalFrame extends javax.swing.JFrame {
 
     public void CriarOpcaoCorretaFrame() {
         if (telaOpcaoCorreta == null) {
-            telaOpcaoCorreta = new OpcaoCorretaFrame();
+            telaOpcaoCorreta = new OpcaoCorretaFrame(this);
         }
         jDesktopPane1.add(telaOpcaoCorreta);
         telaOpcaoCorreta.setVisible(true);
@@ -142,7 +144,7 @@ public class PrincipalFrame extends javax.swing.JFrame {
 
     public void CriarOpcaoErradaFrame() {
         if (telaOpcaoErrada == null) {
-            telaOpcaoErrada = new OpcaoErradaFrame();
+            telaOpcaoErrada = new OpcaoErradaFrame(this);
         }
         jDesktopPane1.add(telaOpcaoErrada);
         telaOpcaoErrada.setVisible(true);
@@ -150,7 +152,7 @@ public class PrincipalFrame extends javax.swing.JFrame {
 
     public void CriarPeixeFrame() {
         if (telaPeixe == null) {
-            telaPeixe = new PeixeFrame();
+            telaPeixe = new PeixeFrame(this);
         }
         jDesktopPane1.add(telaPeixe);
         telaPeixe.setVisible(true);

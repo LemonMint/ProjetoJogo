@@ -8,30 +8,33 @@ package br.jogo.listeners;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import telas.ComecoFrame;
+import telas.PrincipalFrame;
 
 /**
  *
  * @author Lemon
  */
-public class ComecoListener implements ActionListener{
+public class ComecoListener implements ActionListener {
 
     ComecoFrame frame;
+    PrincipalFrame principal;
 
-    public ComecoListener(ComecoFrame frame) {
+    public ComecoListener(ComecoFrame frame, PrincipalFrame principal) {
         this.frame = frame;
+        this.principal = principal;
     }
-    
+
     @Override
     public void actionPerformed(ActionEvent ae) {
-       switch(ae.getActionCommand()){
-           case "seguir":
-               
-               break;
-           case "muro":
-               
-               break;
-       }
-        
+        switch (ae.getActionCommand()) {
+            case "seguir":
+                principal.CriarFlorestaFrame();
+                break;
+            case "muro":
+                principal.CriarMuroFrame();
+                break;
+        }
+
     }
-    
+
 }

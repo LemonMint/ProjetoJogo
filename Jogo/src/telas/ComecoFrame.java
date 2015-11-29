@@ -14,20 +14,19 @@ import javax.swing.plaf.basic.BasicInternalFrameUI;
  */
 public class ComecoFrame extends javax.swing.JInternalFrame {
 
-    ComecoListener listener = new ComecoListener(this);
-    
     /**
      * Creates new form ComecoFrame
      */
-    public ComecoFrame() {
+    public ComecoFrame(PrincipalFrame principal) {
         initComponents();
         setBorder(null);
-        ((BasicInternalFrameUI)this.getUI()).setNorthPane(null);
+        ((BasicInternalFrameUI) this.getUI()).setNorthPane(null);
+        ComecoListener listener = new ComecoListener(this, principal);
         btMuro.addActionListener(listener);
         btMuro.setActionCommand("muro");
         btSeguir.addActionListener(listener);
         btSeguir.setActionCommand("seguir");
-        
+
     }
 
     /**

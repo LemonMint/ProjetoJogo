@@ -8,6 +8,7 @@ package br.jogo.listeners;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import telas.CadeadoFrame;
+import telas.PrincipalFrame;
 
 /**
  *
@@ -16,9 +17,11 @@ import telas.CadeadoFrame;
 public class CadeadoListener implements ActionListener{
 
     CadeadoFrame frame;
-
-    public CadeadoListener(CadeadoFrame frame) {
+    PrincipalFrame principal;
+    
+    public CadeadoListener(CadeadoFrame frame, PrincipalFrame principal) {
         this.frame = frame;
+        this.principal = principal;
     }
     
     @Override
