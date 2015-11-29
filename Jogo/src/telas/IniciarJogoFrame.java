@@ -38,7 +38,11 @@ public class IniciarJogoFrame extends javax.swing.JInternalFrame {
     public void Creditos(){
         JOptionPane.showMessageDialog(this, "Feito por\nMarcos Paulo\n&\nRaul Porto");
     }
-
+    
+    public void SairTela(){
+        PrincipalFrame.telaIniciarJogo = null;
+        this.dispose();
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

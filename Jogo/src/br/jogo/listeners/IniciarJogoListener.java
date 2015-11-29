@@ -8,6 +8,7 @@ package br.jogo.listeners;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import telas.IniciarJogoFrame;
+import telas.PrincipalFrame;
 
 /**
  *
@@ -16,7 +17,7 @@ import telas.IniciarJogoFrame;
 public class IniciarJogoListener implements ActionListener {
 
     IniciarJogoFrame frame;
-
+    PrincipalFrame Principal;
     public IniciarJogoListener(IniciarJogoFrame frame) {
         this.frame = frame;
     }
@@ -26,7 +27,8 @@ public class IniciarJogoListener implements ActionListener {
         switch (ae.getActionCommand()) {
 
             case "iniciar":
-                
+                frame.SairTela();
+                Principal.CriarComecoFrame();
                 break;
 
             case "creditos":
