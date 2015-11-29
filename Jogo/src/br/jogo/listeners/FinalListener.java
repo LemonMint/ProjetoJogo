@@ -6,30 +6,30 @@
 package br.jogo.listeners;
 
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import telas.OpcaoCorretaFrame;
+import telas.FinalFrame;
 import telas.PrincipalFrame;
 
 /**
  *
- * @author Lemon
+ * @author Marcos
  */
-public class OpcaoCorretaListener implements ActionListener {
+public class FinalListener {
 
-    OpcaoCorretaFrame frame;
+    FinalFrame frame;
     PrincipalFrame principal;
 
-    public OpcaoCorretaListener(OpcaoCorretaFrame frame, PrincipalFrame principal) {
+    public FinalListener(FinalFrame frame, PrincipalFrame principal) {
         this.frame = frame;
         this.principal = principal;
     }
 
-    @Override
     public void actionPerformed(ActionEvent ae) {
-        if ("passar".equals(ae.getActionCommand())) {
-            frame.Sair();
-            principal.CriarFinalFrame();
+        switch (ae.getActionCommand()) {
+            case "carregar":
+                principal.CriarNeveFrame();
+                frame.Sair();
+                break;
+
         }
     }
-
 }

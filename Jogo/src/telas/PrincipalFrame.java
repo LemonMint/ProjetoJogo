@@ -35,6 +35,7 @@ public class PrincipalFrame extends javax.swing.JFrame {
     public static OpcaoCorretaFrame telaOpcaoCorreta = null;
     public static OpcaoErradaFrame telaOpcaoErrada = null;
     public static PeixeFrame telaPeixe = null;
+    public static FinalFrame telaFinalFrame = null;
 
     public void CriarComecoFrame() {
         if (telaComeco == null) {
@@ -156,6 +157,14 @@ public class PrincipalFrame extends javax.swing.JFrame {
         }
         jDesktopPane1.add(telaPeixe);
         telaPeixe.setVisible(true);
+    }
+    
+    public void CriarFinalFrame(){
+        if(telaFinalFrame == null){
+            telaFinalFrame = new FinalFrame(this);
+        }
+        jDesktopPane1.add(telaFinalFrame);
+        telaFinalFrame.setVisible(true);
     }
 
     /**
