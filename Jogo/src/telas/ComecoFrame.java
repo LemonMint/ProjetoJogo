@@ -5,6 +5,7 @@
  */
 package telas;
 
+import br.jogo.listeners.ComecoListener;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
 
 /**
@@ -13,6 +14,8 @@ import javax.swing.plaf.basic.BasicInternalFrameUI;
  */
 public class ComecoFrame extends javax.swing.JInternalFrame {
 
+    ComecoListener listener = new ComecoListener(this);
+    
     /**
      * Creates new form ComecoFrame
      */
@@ -20,6 +23,11 @@ public class ComecoFrame extends javax.swing.JInternalFrame {
         initComponents();
         setBorder(null);
         ((BasicInternalFrameUI)this.getUI()).setNorthPane(null);
+        btMuro.addActionListener(listener);
+        btMuro.setActionCommand("muro");
+        btSeguir.addActionListener(listener);
+        btSeguir.setActionCommand("seguir");
+        
     }
 
     /**
@@ -34,8 +42,8 @@ public class ComecoFrame extends javax.swing.JInternalFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        btMuro = new javax.swing.JButton();
+        btSeguir = new javax.swing.JButton();
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/jogo/imagens/Inicio.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
@@ -48,13 +56,13 @@ public class ComecoFrame extends javax.swing.JInternalFrame {
         jLabel2.setText("então vejo uma luz a frente e olhando para trás, apenas um grande muro.\"");
         jLabel2.setPreferredSize(new java.awt.Dimension(900, 55));
 
-        jButton1.setFont(new java.awt.Font("MV Boli", 1, 18)); // NOI18N
-        jButton1.setText("\"Se aproximar do Grande Muro.\"");
-        jButton1.setPreferredSize(new java.awt.Dimension(367, 40));
+        btMuro.setFont(new java.awt.Font("MV Boli", 1, 18)); // NOI18N
+        btMuro.setText("\"Se aproximar do Grande Muro.\"");
+        btMuro.setPreferredSize(new java.awt.Dimension(367, 40));
 
-        jButton2.setFont(new java.awt.Font("MV Boli", 1, 18)); // NOI18N
-        jButton2.setText("\"Seguir pelo caminho iluminado.\"");
-        jButton2.setPreferredSize(new java.awt.Dimension(347, 40));
+        btSeguir.setFont(new java.awt.Font("MV Boli", 1, 18)); // NOI18N
+        btSeguir.setText("\"Seguir pelo caminho iluminado.\"");
+        btSeguir.setPreferredSize(new java.awt.Dimension(347, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -64,14 +72,14 @@ public class ComecoFrame extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(526, 526, 526)
-                        .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(btSeguir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(73, 73, 73)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 900, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 443, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(btMuro, javax.swing.GroupLayout.PREFERRED_SIZE, 443, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(35, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -85,8 +93,8 @@ public class ComecoFrame extends javax.swing.JInternalFrame {
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 81, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btMuro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btSeguir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(60, 60, 60))
         );
 
@@ -95,8 +103,8 @@ public class ComecoFrame extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton btMuro;
+    private javax.swing.JButton btSeguir;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

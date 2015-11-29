@@ -13,19 +13,75 @@ import javax.swing.ImageIcon;
  */
 public class PrincipalFrame extends javax.swing.JFrame {
 
-   
     public PrincipalFrame() {
         initComponents();
         jDesktopPane1.setLayout(null);
+        CriarIniciarJogoFrame();
+
     }
-  
-    static ComecoFrame comecoFrame = null;
-    
-    public void CriarComecoFrame(){
-        if(comecoFrame == null){
-        comecoFrame = new ComecoFrame();
+
+    public static ComecoFrame telaComeco = null;
+    public static IniciarJogoFrame telaIniciarJogo = null;
+    public static DesertoFrame telaDeserto = null;
+    public static FlorestaFrame telaFloresta = null;
+    public static PortaoFrame telaPortao = null;
+    public static OasisFrame telaOasis = null;
+    public static MuroFrame telaMuro = null;
+
+    public void CriarComecoFrame() {
+        if (telaComeco == null) {
+            telaComeco = new ComecoFrame();
         }
-        jDesktopPane1.add(comecoFrame);
+        jDesktopPane1.add(telaComeco);
+        telaComeco.setVisible(true);
+    }
+
+    public void CriarIniciarJogoFrame() {
+        if (telaIniciarJogo == null) {
+            telaIniciarJogo = new IniciarJogoFrame();
+        }
+        jDesktopPane1.add(telaIniciarJogo);
+        telaIniciarJogo.setVisible(true);
+    }
+
+    public void CriarDesertoFrame() {
+        if (telaDeserto == null) {
+            telaDeserto = new DesertoFrame();
+        }
+        jDesktopPane1.add(telaDeserto);
+        telaDeserto.setVisible(true);
+    }
+
+    public void CriarFlorestaFrame() {
+        if (telaFloresta == null) {
+            telaFloresta = new FlorestaFrame();
+        }
+        jDesktopPane1.add(telaFloresta);
+        telaFloresta.setVisible(true);
+    }
+
+    public void CriarPortaoFrame() {
+        if (telaPortao == null) {
+            telaPortao = new PortaoFrame();
+        }
+        jDesktopPane1.add(telaPortao);
+        telaPortao.setVisible(true);
+    }
+
+    public void CriarOasisFrame() {
+        if (telaOasis == null) {
+            telaOasis = new OasisFrame();
+        }
+        jDesktopPane1.add(telaOasis);
+        telaOasis.setVisible(true);
+    }
+    
+    public void CriarMuroFrame(){
+        if(telaMuro == null){
+            telaMuro = new MuroFrame();
+        }
+        jDesktopPane1.add(telaMuro);
+        telaMuro.setVisible(true);
     }
 
     /**
@@ -41,6 +97,7 @@ public class PrincipalFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1024, 768));
+        setResizable(false);
 
         javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
         jDesktopPane1.setLayout(jDesktopPane1Layout);

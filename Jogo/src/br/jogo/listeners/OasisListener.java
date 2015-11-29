@@ -7,31 +7,28 @@ package br.jogo.listeners;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import telas.ComecoFrame;
+import telas.OasisFrame;
 
 /**
  *
  * @author Lemon
  */
-public class ComecoListener implements ActionListener{
+public class OasisListener  implements ActionListener{
 
-    ComecoFrame frame;
+    OasisFrame frame;
 
-    public ComecoListener(ComecoFrame frame) {
+    public OasisListener(OasisFrame frame) {
         this.frame = frame;
     }
     
     @Override
     public void actionPerformed(ActionEvent ae) {
-       switch(ae.getActionCommand()){
-           case "seguir":
-               
-               break;
-           case "muro":
-               
-               break;
-       }
-        
+        switch(ae.getActionCommand()){
+            case "seguir":
+                
+                break;
+        }
     }
+    
     
 }

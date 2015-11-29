@@ -5,17 +5,38 @@
  */
 package telas;
 
+import br.jogo.listeners.IniciarJogoListener;
+import javax.swing.JOptionPane;
+import javax.swing.plaf.basic.BasicInternalFrameUI;
+
 /**
  *
  * @author Lemon
  */
 public class IniciarJogoFrame extends javax.swing.JInternalFrame {
-
+    
+    IniciarJogoListener listener = new IniciarJogoListener(this);
     /**
      * Creates new form IniciarJogoFrame
      */
     public IniciarJogoFrame() {
         initComponents();
+        setBorder(null);
+        ((BasicInternalFrameUI) this.getUI()).setNorthPane(null);
+        btIniciar.addActionListener(listener);
+        btIniciar.setActionCommand("iniciar");
+        btCreditos.addActionListener(listener);
+        btCreditos.setActionCommand("creditos");
+        btSair.addActionListener(listener);
+        btSair.setActionCommand("sair");
+    }
+    
+    public void Sair(){
+        System.exit(0);
+    }
+    
+    public void Creditos(){
+        JOptionPane.showMessageDialog(this, "Feito por\nMarcos Paulo\n&\nRaul Porto");
     }
 
     /**
@@ -30,29 +51,29 @@ public class IniciarJogoFrame extends javax.swing.JInternalFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        btIniciar = new javax.swing.JButton();
+        btCreditos = new javax.swing.JButton();
+        btSair = new javax.swing.JButton();
 
         setPreferredSize(new java.awt.Dimension(1024, 768));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/jogo/imagens/LogindoJogo.png"))); // NOI18N
 
         jLabel2.setFont(new java.awt.Font("MV Boli", 1, 18)); // NOI18N
-        jLabel2.setText("                             A Lenda do Nome do Jogo");
+        jLabel2.setText("                                 A Lenda do Herói");
         jLabel2.setPreferredSize(new java.awt.Dimension(900, 55));
 
-        jButton1.setFont(new java.awt.Font("MV Boli", 1, 18)); // NOI18N
-        jButton1.setText("Iniciar Jornada");
-        jButton1.setPreferredSize(new java.awt.Dimension(300, 40));
+        btIniciar.setFont(new java.awt.Font("MV Boli", 1, 18)); // NOI18N
+        btIniciar.setText("Iniciar Jornada");
+        btIniciar.setPreferredSize(new java.awt.Dimension(300, 40));
 
-        jButton2.setFont(new java.awt.Font("MV Boli", 1, 18)); // NOI18N
-        jButton2.setText("Créditos");
-        jButton2.setPreferredSize(new java.awt.Dimension(300, 40));
+        btCreditos.setFont(new java.awt.Font("MV Boli", 1, 18)); // NOI18N
+        btCreditos.setText("Créditos");
+        btCreditos.setPreferredSize(new java.awt.Dimension(300, 40));
 
-        jButton3.setFont(new java.awt.Font("MV Boli", 1, 18)); // NOI18N
-        jButton3.setText("Sair");
-        jButton3.setPreferredSize(new java.awt.Dimension(300, 40));
+        btSair.setFont(new java.awt.Font("MV Boli", 1, 18)); // NOI18N
+        btSair.setText("Sair");
+        btSair.setPreferredSize(new java.awt.Dimension(300, 40));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -68,9 +89,9 @@ public class IniciarJogoFrame extends javax.swing.JInternalFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(325, 325, 325)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(btCreditos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btIniciar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btSair, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(57, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -81,11 +102,11 @@ public class IniciarJogoFrame extends javax.swing.JInternalFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btIniciar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btCreditos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btSair, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(80, Short.MAX_VALUE))
         );
 
@@ -105,9 +126,9 @@ public class IniciarJogoFrame extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton btCreditos;
+    private javax.swing.JButton btIniciar;
+    private javax.swing.JButton btSair;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
