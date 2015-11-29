@@ -27,6 +27,14 @@ public class PrincipalFrame extends javax.swing.JFrame {
     public static PortaoFrame telaPortao = null;
     public static OasisFrame telaOasis = null;
     public static MuroFrame telaMuro = null;
+    public static Arvore2Frame telaArvore2 = null;
+    public static ArvoreFrame telaArvore = null;
+    public static CadeadoFrame telaCadeado = null;
+    public static CaminhoPedrasFrame telaCaminhoPedras = null;
+    public static NeveFrame telaNeve = null;
+    public static OpcaoCorretaFrame telaOpcaoCorreta = null;
+    public static OpcaoErradaFrame telaOpcaoErrada = null;
+    public static PeixeFrame telaPeixe = null;
 
     public void CriarComecoFrame() {
         if (telaComeco == null) {
@@ -75,13 +83,77 @@ public class PrincipalFrame extends javax.swing.JFrame {
         jDesktopPane1.add(telaOasis);
         telaOasis.setVisible(true);
     }
-    
-    public void CriarMuroFrame(){
-        if(telaMuro == null){
+
+    public void CriarMuroFrame() {
+        if (telaMuro == null) {
             telaMuro = new MuroFrame();
         }
         jDesktopPane1.add(telaMuro);
         telaMuro.setVisible(true);
+    }
+
+    public void CriarArvore2Frame() {
+        if (telaArvore2 == null) {
+            telaArvore2 = new Arvore2Frame();
+        }
+        jDesktopPane1.add(telaArvore2);
+        telaArvore2.setVisible(true);
+    }
+
+    public void CriarArvoreFrame() {
+        if (telaArvore == null) {
+            telaArvore = new ArvoreFrame();
+        }
+        jDesktopPane1.add(telaArvore);
+        telaArvore.setVisible(true);
+    }
+
+    public void CriarCadeadoFrame() {
+        if (telaCadeado == null) {
+            telaCadeado = new CadeadoFrame();
+        }
+        jDesktopPane1.add(telaCadeado);
+        telaCadeado.setVisible(true);
+    }
+
+    public void CriarCaminhoPedras() {
+        if (telaCaminhoPedras == null) {
+            telaCaminhoPedras = new CaminhoPedrasFrame();
+        }
+        jDesktopPane1.add(telaCaminhoPedras);
+        telaCaminhoPedras.setVisible(true);
+    }
+
+    public void CriarNeveFrame() {
+        if (telaNeve == null) {
+            telaNeve = new NeveFrame();
+        }
+        jDesktopPane1.add(telaNeve);
+        telaNeve.setVisible(true);
+    }
+
+    public void CriarOpcaoCorretaFrame() {
+        if (telaOpcaoCorreta == null) {
+            telaOpcaoCorreta = new OpcaoCorretaFrame();
+        }
+        jDesktopPane1.add(telaOpcaoCorreta);
+        telaOpcaoCorreta.setVisible(true);
+    }
+
+    public void CriarOpcaoErradaFrame() {
+        if (telaOpcaoErrada == null) {
+            telaOpcaoErrada = new OpcaoErradaFrame();
+        }
+        jDesktopPane1.add(telaOpcaoErrada);
+        telaOpcaoErrada.setVisible(true);
+    }
+
+    public void CriarPeixeFrame() {
+        if (telaPeixe == null) {
+            telaPeixe = new PeixeFrame();
+        }
+        jDesktopPane1.add(telaPeixe);
+        telaPeixe.setVisible(true);
     }
 
     /**
